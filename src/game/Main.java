@@ -33,7 +33,7 @@ public class Main {
             // win conditions
             if (Player1Points > 39) ;
             {
-                System.out.println(Name1 + " wins");
+                System.out.println(player1.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
 
@@ -41,20 +41,20 @@ public class Main {
 
             if (Player2Points > 39) ;
             {
-                System.out.println(Name2 + " wins");
+                System.out.println(player2.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
 
             }
             if (SumOfTwoDice > 11 && player1.isturn) ;
             {
-                System.out.println(Name1 + " wins");
+                System.out.println(player1.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
             }
             if (SumOfTwoDice > 11 && player2.isturn) ;
             {
-                System.out.println(Name2 + " wins");
+                System.out.println(player2.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
             }
