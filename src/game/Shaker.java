@@ -27,7 +27,7 @@ public class Shaker {
 
     //Creating the shake Method returning a string with the values fot Dice1 and Dice2
 
-    String Shake() {
+   public String Shake() {
 
         String ResultDice1 = Integer.toString(Dice1.Roll());
         String ResultDice2 = Integer.toString(Dice2.Roll());

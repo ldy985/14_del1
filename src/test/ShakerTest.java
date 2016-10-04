@@ -13,20 +13,23 @@ import org.junit.Test;
 public class ShakerTest {
 
     // Declares object of the "Shaker" class in the folder "game".
-    private game.Shaker dice = new game.Shaker();
+    private game.Shaker shake = new game.Shaker();
+
 
     // Declares variables.
     private boolean getSumTestComplete = false;
     private boolean getDoubleTestComplete = false;
 
 
-
     @Test
     public void getSumTest() throws Exception {
 
+        shake.Shake();
         // Checks if the sum given by the Shaker class is between 2 and 12.
         // Returns a boolean whether it works.
-        if (dice.getSum() >= 2 && dice.getSum() <= 12) {
+
+
+        if (shake.getSum() >= 2 && shake.getSum() <= 12) {
             getSumTestComplete = true;
         }
         /*
@@ -43,12 +46,14 @@ public class ShakerTest {
     @Test
     public void getDoubleTest() {
 
-        if(dice.getDouble() == true && dice.valueDice1 == dice.valueDice2) {
+        shake.Shake();
+
+        if(shake.getDouble() == true && shake.valueDice1 == shake.valueDice2) {
             getDoubleTestComplete = true;
         }
 
         // Checks if the booleans are true.
-        assertEquals(true, getDoubleTestComplete);
+        assertEquals(shake.getDouble(), getDoubleTestComplete);
 
     }
 
