@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        /*
         //Enter name. Names are saved as Name1 and Name2 variables.
         Scanner scan = new Scanner(System.in);
         System.out.println("Player 1. Please enter your name");
@@ -61,5 +62,6 @@ public class Main {
                 game = false;
             }
         }
+        */
     }
 }
