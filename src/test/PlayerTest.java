@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
  * Created by Lasse on 02/10/2016. Time spent 45min.
  */
 public class PlayerTest {
-    Player testPlayer = new game.Player("Player1");
+    game.Player testPlayer = new game.Player("Player1");
 
 
     @org.junit.Test

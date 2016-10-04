@@ -20,12 +20,12 @@ public class Main {
 
         boolean game = true;
 
-        while (game = true) {
-            if (player1.isTurn) {
+        while (game == true) {
+            if (player1.getIsTurn()) {
                 shaker.Shake();
                 System.out.println(player1.getName() + "'s turn");
                 System.out.println(player1.getName() + "'s points " + player1.getPoints());
-            } else if (player2.isTurn) {
+            } else if (player2.getIsTurn()) {
                 shaker.Shake();
                 System.out.println(player2.getName() + "'s turn");
                 System.out.println(player2.getName() + "'s points " + player2.getPoints());
@@ -33,7 +33,7 @@ public class Main {
 
 
             // win conditions
-            if (Player1Points > 39) ;
+            if (player1.getPoints() > 39) ;
             {
                 System.out.println(player1.getName() + " wins");
                 System.out.println("GAME OVER");
@@ -41,20 +41,20 @@ public class Main {
 
             }
 
-            if (Player2Points > 39) ;
+            if (player2.getPoints() > 39) ;
             {
                 System.out.println(player2.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
 
             }
-            if (SumOfTwoDice > 11 && player1.isturn) ;
+            if (shaker.getSum() > 11 && player1.getIsTurn()) ;
             {
                 System.out.println(player1.getName() + " wins");
                 System.out.println("GAME OVER");
                 game = false;
             }
-            if (SumOfTwoDice > 11 && player2.isturn) ;
+            if (shaker.getSum() > 11 && player2.getIsTurn()) ;
             {
                 System.out.println(player2.getName() + " wins");
                 System.out.println("GAME OVER");
