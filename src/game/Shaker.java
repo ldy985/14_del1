@@ -1,7 +1,5 @@
 package game;
 
-import java.awt.*;
-
 /**
  * Created by timot on 03-10-2016.
  */
@@ -10,54 +8,77 @@ public class Shaker {
     //initialising variables
 
     private int sum;
-    public int valueDice1;
-    public int valueDice2;
+    private int valueDice1;
+    private int valueDice2;
+    private boolean isDouble;
 
-    //Creating two objects from the dice class.
+    //Creating two objects from the Dice class.
 
-    private Dice Dice1 = new Dice();
-    private Dice Dice2 = new Dice();
+    private Dice dice1 = new Dice();
+    private Dice dice2 = new Dice();
 
 
     //The Constructor for the Shaker class
 
-   public Shaker() {
+    public Shaker() {
 
     }
 
-    //Creating the shake Method returning a string with the values fot Dice1 and Dice2
+    //Creating the shake Method returning a string with the values fot Dice1 and dice2
 
-   public String Shake() {
+    public String Shake() {
 
-        String ResultDice1 = Integer.toString(Dice1.Roll());
-        String ResultDice2 = Integer.toString(Dice2.Roll());
+        dice1.Roll();
+        dice2.Roll();
 
-        valueDice1 = Integer.parseInt(ResultDice1);
-        valueDice2 = Integer.parseInt(ResultDice2);
+        valueDice1 = dice1.getFaceValue();
+        valueDice2 = dice2.getFaceValue();
 
         sum = valueDice1 + valueDice2;
 
-        return "The value for the first dice is " + ResultDice1 + " and the value for the second dice is " + ResultDice2 + ".";
+        return "The value for the first dice is " + valueDice1 + " and the value for the second dice is " + valueDice2 + ".";
     }
+
+    public int getDie1Value(){
+        return valueDice1;
+    }
+
+    public int getDie2Value(){
+        return  valueDice2;
+    }
+
 
     //Creating the method for storing the sum of the Dice values
 
     public int getSum() {
-
         return sum;
     }
 
     //Creating the method to evaluate the result from dice 1 and dice 2.
 
+    public void setDouble(boolean doubleSet) {
+
+
+        isDouble = doubleSet;
+    }
+
     public boolean getDouble() {
 
+
         if (valueDice1 == valueDice2) {
-            return true;
+
+            isDouble = true;
+
         } else {
-            return false;
+
+            isDouble = false;
         }
 
+        return isDouble;
+
     }
+
+
 }
 
 

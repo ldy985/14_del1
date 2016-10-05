@@ -34,11 +34,11 @@ public class Player {
     }
 
     public void setPoints(int points) {
-        point = points;
+        this.point = points;
     }
 
-    public void addPoints(int points) {
-        point = points + point;
+    public void addPoints(int sum) {
+        this.point = point + sum;
     }
 
     public int getPoints() {
