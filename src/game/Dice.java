@@ -7,9 +7,9 @@ import java.util.Random;
  */
 public class Dice {
 
-    private int faceValue;
+    private final Random rand = new Random();
 
-    private Random rand = new Random();
+    private int faceValue;
 
     public void Roll() {
 

@@ -22,10 +22,8 @@ public class Main {
 
         boolean game = true;
 
-        // Sets initial value for the various methods, setIsTurn(), setDouble6() for p1 and setDouble6() for p2
+        // Sets the player who starts the game
         player1.setIsTurn(true);
-        player1.setDouble6(false);
-        player2.setDouble6(false);
 
         System.out.println("Please press 'n' and press Enter");
 
