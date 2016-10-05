@@ -3,6 +3,7 @@ package game;
 /**
  * Created by timot on 03-10-2016.
  */
+
 public class Shaker {
 
     //initialising variables
@@ -39,12 +40,12 @@ public class Shaker {
         return "The value for the first dice is " + valueDice1 + " and the value for the second dice is " + valueDice2 + ".";
     }
 
-    public int getDie1Value(){
+    public int getDie1Value() {
         return valueDice1;
     }
 
-    public int getDie2Value(){
-        return  valueDice2;
+    public int getDie2Value() {
+        return valueDice2;
     }
 
 
@@ -54,13 +55,7 @@ public class Shaker {
         return sum;
     }
 
-    //Creating the method to evaluate the result from dice 1 and dice 2.
-
-    public void setDouble(boolean doubleSet) {
-
-
-        isDouble = doubleSet;
-    }
+    //Creating the method to evaluate if the values on the Dice rolled are the same
 
     public boolean getDouble() {
 
@@ -75,9 +70,7 @@ public class Shaker {
         }
 
         return isDouble;
-
     }
-
 
 }
 

@@ -26,6 +26,8 @@ public class DiceTest {
 
         for (int i = 0; i < 60000; i++) {
 
+            dice.Roll();
+
             value = dice.getFaceValue();
             // System.out.println(value + " ");
             switch (value) {

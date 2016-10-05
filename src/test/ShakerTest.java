@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
+// Tests the Shaker class
 public class ShakerTest {
 
     // Declares object of the "Shaker" class in the folder "game".
@@ -43,7 +43,7 @@ public class ShakerTest {
             shake.Shake();
 
             value = shake.getSum();
-            // System.out.println(value + " ");
+
             switch (value) {
                 case 2:
                     to++;
@@ -86,7 +86,7 @@ public class ShakerTest {
         }
 
         // Tests the program.
-        // Checks if all values, of the dice (1-6), has been rolled and equal amount of times (10000/60000)
+        // Checks if all values, of the dice (2-12), has been rolled and equal amount of times (1000/12000)
         // with a deviation of 400 times.
         assertEquals(0, forkertnr);
         assertEquals(28, to, 24);
@@ -103,8 +103,6 @@ public class ShakerTest {
 
     }
 
-
-
     // Tests if the getSum() method works in the Shaker class
     @Test
     public void getSumTest() throws Exception {
@@ -115,6 +113,7 @@ public class ShakerTest {
         // Checks if the sum given by the Shaker class is between 2 and 12.
         // Returns a boolean whether it works.
         if (shake.getSum() >= 2 && shake.getSum() <= 12) {
+
             getSumTestComplete = true;
         }
 
@@ -126,7 +125,7 @@ public class ShakerTest {
 
 
 
-    // Tests if the
+    // Tests if the getDouble() method works in the Shaker class.
     @Test
     public void getDoubleTest() {
 
@@ -136,7 +135,7 @@ public class ShakerTest {
         // Checks if the getDouble() method works from the Shaker class.
         // Compares the boolean value of the getDouble() with the boolean value of the test
         // (Comparing the value of each die rolled, if it's the same value.)
-        if (shake.getDouble() == true && dice1.getFaceValue() == dice2.getFaceValue()) {
+        if (shake.getDouble() == true && shake.getDie1Value() == shake.getDie2Value()) {
 
             getDoubleTestComplete = true;
         }

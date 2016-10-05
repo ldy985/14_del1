@@ -38,6 +38,7 @@ public class Player {
     }
 
     public void addPoints(int sum) {
+
         this.point = point + sum;
     }
 

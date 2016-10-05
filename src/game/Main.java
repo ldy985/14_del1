@@ -22,26 +22,31 @@ public class Main {
 
         boolean game = true;
 
+        // Sets initial value for the various methods, setIsTurn(), setDouble6() for p1 and setDouble6() for p2
         player1.setIsTurn(true);
         player1.setDouble6(false);
         player2.setDouble6(false);
 
         System.out.println("Please press 'n' and press Enter");
 
+        // While-loop runs as long as the win conditions hasn't been met (game == false)
         while (game == true) {
 
             String nextTurn = scan.nextLine();
 
-            if(nextTurn.equals("n")) {
+            // Asks the user to press 'n' for each round in game
+            if (nextTurn.equals("n")) {
 
-                // Player 1's turn
-
+                // Player 1's turn starts
                 if (player1.getIsTurn() == true) {
 
+                    // Player 1 rolls the dice
                     shaker.Shake();
 
+                    // Player 1 gets the sum of the roll added to his/her's points
                     player1.addPoints(shaker.getSum());
 
+                    // Game prompts with information about the turn
                     System.out.println(player1.getName() + "'s turn");
 
                     System.out.println("Die 1: " + shaker.getDie1Value());
@@ -50,15 +55,21 @@ public class Main {
                     System.out.println("Player1 sum: " + shaker.getSum());
                     System.out.println(player1.getName() + "'s points " + player1.getPoints() + "\n");
 
-                    // win conditions
-                    if (player1.getPoints() > 39) {
+                    // Resets point back to "0" if 2x 1 is rolled
+                    if (shaker.getDie1Value() == 1 && shaker.getDie2Value() == 1) {
+                        player1.setPoints(0);
+                    }
+
+                    // Win conditions
+                    if (player1.getPoints() > 39 && shaker.getDouble() == true) {
                         System.out.println(player1.getName() + " wins");
                         System.out.println("GAME OVER");
                         game = false;
-
-
                     }
 
+                    // win condition
+                    // first time: Marks that you have rolled 2x 6
+                    // Second time: Set Player 1 as winner if 2x 6 is rolled again
                     if (shaker.getSum() == 12) {
 
                         if (player1.getDouble6() == true) {
@@ -70,28 +81,24 @@ public class Main {
                         } else {
 
                             player1.setDouble6(true);
-
                         }
 
                     } else {
 
                         player1.setDouble6(false);
-
                     }
 
-                    // Gives extra trun if rolled double
 
+                    // Gives extra turn if the two dice roll the same value
                     if (!shaker.getDouble() == true) {
 
                         player1.setIsTurn(false);
                         player2.setIsTurn(true);
-
                     }
-
 
                 } else {
 
-                    // Player 2's turn
+                    // Player 2's turn starts
                     shaker.Shake();
 
                     player2.addPoints(shaker.getSum());
@@ -105,14 +112,21 @@ public class Main {
 
                     System.out.println(player2.getName() + "'s points " + player2.getPoints() + "\n");
 
-                    if (player2.getPoints() > 39) {
+                    // Resets point back to "0" if 2x 1 is rolled
+                    if (shaker.getDie1Value() == 1 && shaker.getDie2Value() == 1) {
+                        player2.setPoints(0);
+                    }
+
+                    // Win condition
+                    if (player2.getPoints() > 39 && shaker.getDouble() == true) {
                         System.out.println(player2.getName() + " wins");
                         System.out.println("GAME OVER");
                         game = false;
-
-                        System.out.println("4");
                     }
 
+                    // win condition
+                    // first time: Marks that you have rolled 2x 6
+                    // Second time: Set Player 2 as winner if 2x 6 is rolled again
                     if (shaker.getSum() == 12) {
 
                         if (player2.getDouble6() == true) {
@@ -133,25 +147,21 @@ public class Main {
 
                     }
 
-
+                    // Gives extra turn if the two dice roll the same value
                     if (!shaker.getDouble() == true) {
 
                         player2.setIsTurn(false);
                         player1.setIsTurn(true);
-
                     }
 
                 }
 
             } else {
 
+                // Asks the user to press n
                 System.out.println("Press 'n' and press Enter!");
 
             }
-
-
-
         }
-
     }
 }
