@@ -10,12 +10,12 @@ public class PlayerTest {
 
 
     @org.junit.Test
-    public void getName() throws Exception {
+    public void getName(){
         assertEquals("Player1", testPlayer.getName());
     }
 
     @org.junit.Test
-    public void setPoints() throws Exception {
+    public void setPoints(){
         testPlayer.setPoints(100);
         assertEquals(100, testPlayer.getPoints());
 
@@ -24,7 +24,7 @@ public class PlayerTest {
     }
 
     @org.junit.Test
-    public void setIsTurn() throws Exception {
+    public void setIsTurn(){
         testPlayer.setIsTurn(true);
         assertEquals(true, testPlayer.getIsTurn());
 

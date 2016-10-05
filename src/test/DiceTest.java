@@ -10,7 +10,7 @@ public class DiceTest {
 
     // Declares variables
     @org.junit.Test
-    public void Roll() throws Exception {
+    public void Roll(){
 
         int value;
         int en = 0;

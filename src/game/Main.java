@@ -2,9 +2,6 @@ package game;
 
 import desktop_resources.GUI;
 
-import java.util.Scanner;
-
-
 public class Main {
 
     public static void main(String[] args) {
@@ -23,7 +20,6 @@ public class Main {
 
         Player player1 = new Player(Name1);
         Player player2 = new Player(Name2);
-
 
 
         // Sets the player who starts the game
