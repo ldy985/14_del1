@@ -1,5 +1,8 @@
 package game;
 
+import desktop_fields.Field;
+import desktop_resources.GUI;
+
 import java.util.Scanner;
 
 
@@ -7,6 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Create empty GUI and open it
+        GUI.setDice(0,0,0,0,0,0);
+        
         //Enter name. Names are saved as Name1 and Name2 variables.
         Scanner scan = new Scanner(System.in);
         System.out.println("Player 1. Please enter your name");
@@ -46,6 +52,9 @@ public class Main {
 
                     // Game prompts with information about the turn
                     System.out.println(player1.getName() + "'s turn");
+
+                    //Update GUI with the dice roll
+                    GUI.setDice(shaker.getDie1Value(),shaker.getDie2Value());
 
                     System.out.println("Die 1: " + shaker.getDie1Value());
                     System.out.println("Die 2: " + shaker.getDie2Value());
@@ -102,6 +111,9 @@ public class Main {
                     player2.addPoints(shaker.getSum());
 
                     System.out.println(player2.getName() + "'s turn");
+
+                    //Update GUI with the dice roll
+                    GUI.setDice(shaker.getDie1Value(),shaker.getDie2Value());
 
                     System.out.println("Die 1: " + shaker.getDie1Value());
                     System.out.println("Die 2: " + shaker.getDie2Value());
@@ -161,5 +173,10 @@ public class Main {
 
             }
         }
+
+
+        //Exit the game
+        GUI.close();
+
     }
 }
