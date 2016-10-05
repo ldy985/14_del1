@@ -42,9 +42,6 @@ public class Main {
                 // Player 1 gets the sum of the roll added to his/her's points
                 player1.addPoints(shaker.getSum());
 
-                // Game prompts with information about the turn
-                //System.out.println(player1.getName() + "'s turn");
-
                 //Update GUI with the dice roll
                 GUI.setDice(shaker.getDie1Value(), shaker.getDie2Value());
 
@@ -58,7 +55,7 @@ public class Main {
 
                 // Win conditions
                 if (player1.getPoints() > 39 && shaker.getDouble() == true) {
-                    GUI.showMessage(player1.getName() + " has WON! \nPress okay to end the game.");
+                    GUI.showMessage(player1.getName() + " has WON! \nPress OK to end the game.");
                     game = false;
                 }
 
@@ -68,7 +65,7 @@ public class Main {
                 if (shaker.getSum() == 12) {
 
                     if (player1.getDouble6() == true) {
-                        GUI.showMessage(player1.getName() + " has WON! \nPress okay to end the game.");
+                        GUI.showMessage(player1.getName() + " has WON! \nPress OK to end the game.");
                         game = false;
 
                     } else {
@@ -96,8 +93,6 @@ public class Main {
 
                 player2.addPoints(shaker.getSum());
 
-                //System.out.println(player2.getName() + "'s turn");
-
                 //Update GUI with the dice roll
                 GUI.setDice(shaker.getDie1Value(), shaker.getDie2Value());
 
@@ -111,7 +106,7 @@ public class Main {
 
                 // Win condition
                 if (player2.getPoints() > 39 && shaker.getDouble() == true) {
-                    GUI.showMessage(player2.getName() + " has WON! \nPress okay to end the game.");
+                    GUI.showMessage(player2.getName() + " has WON! \nPress OK to end the game.");
                     game = false;
                 }
 
@@ -121,7 +116,7 @@ public class Main {
                 if (shaker.getSum() == 12) {
 
                     if (player2.getDouble6() == true) {
-                        GUI.showMessage(player2.getName() + " has WON! \nPress okay to end the game.");
+                        GUI.showMessage(player2.getName() + " has WON! \nPress OK to end the game.");
                         game = false;
 
                     } else {
