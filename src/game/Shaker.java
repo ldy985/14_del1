@@ -19,15 +19,9 @@ public class Shaker {
     private Dice dice2 = new Dice();
 
 
-    //The Constructor for the Shaker class
-
-    public Shaker() {
-
-    }
-
     //Creating the shake Method returning a string with the values fot Dice1 and dice2
 
-    public String Shake() {
+    public void Shake() {
 
         dice1.Roll();
         dice2.Roll();
@@ -37,7 +31,6 @@ public class Shaker {
 
         sum = valueDice1 + valueDice2;
 
-        return "The value for the first dice is " + valueDice1 + " and the value for the second dice is " + valueDice2 + ".";
     }
 
     public int getDie1Value() {
