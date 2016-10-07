@@ -10,12 +10,12 @@ public class PlayerTest {
 
 
     @org.junit.Test
-    public void getName(){
+    public void getName() {
         assertEquals("Player1", testPlayer.getName());
     }
 
     @org.junit.Test
-    public void setPoints(){
+    public void setPoints() {
         testPlayer.setPoints(100);
         assertEquals(100, testPlayer.getPoints());
 
@@ -24,12 +24,27 @@ public class PlayerTest {
     }
 
     @org.junit.Test
-    public void setIsTurn(){
+    public void setIsTurn() {
         testPlayer.setIsTurn(true);
         assertEquals(true, testPlayer.getIsTurn());
 
         testPlayer.setIsTurn(false);
         assertEquals(false, testPlayer.getIsTurn());
+    }
+
+    @org.junit.Test
+    public void addPoints() {
+        testPlayer.setPoints(0);
+        testPlayer.addPoints(100);
+
+        assertEquals(100, testPlayer.getPoints());
+
+        //test overflow
+        testPlayer.setPoints(0);
+        testPlayer.addPoints(Integer.MAX_VALUE);
+        testPlayer.addPoints(1);
+        assertEquals(testPlayer.getPoints() > Integer.MAX_VALUE, testPlayer.getPoints());
+
     }
 
 }
