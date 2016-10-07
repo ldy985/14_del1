@@ -3,6 +3,10 @@ package test;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+/**
+ * Written by: Rasmus Blichfeldt
+ * Purpose: Tests the Shake class
+ */
 
 // Tests the Shaker class
 public class ShakerTest {
@@ -123,7 +127,7 @@ public class ShakerTest {
         // Rolling the dice 1000 times.
         // Counts the values a specific value has been rolled.
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 60000; i++) {
 
             shake.shake();
 
@@ -171,20 +175,20 @@ public class ShakerTest {
         }
 
         // Tests the program.
-        // Checks if all values, of the dice (2-12), has been rolled and equal amount of times (1000/12000)
+        // Checks if all values, of the dice (2-12), has been rolled and equal amount of times
         // with a deviation of 593 times.
         assertEquals(0, forkertnr);
-        assertEquals(28, to, 593);
-        assertEquals(56, tre, 593);
-        assertEquals(83, fire, 593);
-        assertEquals(111, fem, 593);
-        assertEquals(139, seks, 593);
-        assertEquals(167, syv, 593);
-        assertEquals(139, otte, 593);
-        assertEquals(111, ni, 593);
-        assertEquals(83, ti, 593);
-        assertEquals(56, elleve, 593);
-        assertEquals(28, tolv, 593);
+        assertEquals(1667, to, 593);
+        assertEquals(3336, tre, 593);
+        assertEquals(5000, fire, 593);
+        assertEquals(6660, fem, 593);
+        assertEquals(8333, seks, 593);
+        assertEquals(10000, syv, 593);
+        assertEquals(8333, otte, 593);
+        assertEquals(6660, ni, 593);
+        assertEquals(5000, ti, 593);
+        assertEquals(3336, elleve, 593);
+        assertEquals(1667, tolv, 593);
 
     }
 
