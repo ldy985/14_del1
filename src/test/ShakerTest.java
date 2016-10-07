@@ -19,7 +19,7 @@ public class ShakerTest {
     private boolean getDoubleTestComplete = false;
 
     @Test
-    public void probTest(){
+    public void probTest1(){
         int value;
 
         int to = 0;
@@ -35,7 +35,7 @@ public class ShakerTest {
         int tolv = 0;
         int forkertnr = 0;
 
-        // Rolling the dice 60000 times.
+        // Rolling the dice 1000 times.
         // Counts the values a specific value has been rolled.
 
         for (int i = 0; i < 1000; i++) {
@@ -87,19 +87,104 @@ public class ShakerTest {
 
         // Tests the program.
         // Checks if all values, of the dice (2-12), has been rolled and equal amount of times (1000/12000)
-        // with a deviation of 400 times.
+        // with a deviation of 76 times.
         assertEquals(0, forkertnr);
-        assertEquals(28, to, 24);
-        assertEquals(56, tre, 24);
-        assertEquals(83, fire, 24);
-        assertEquals(111, fem, 24);
-        assertEquals(139, seks, 24);
-        assertEquals(167, syv, 24);
-        assertEquals(139, otte, 24);
-        assertEquals(111, ni, 24);
-        assertEquals(83, ti, 24);
-        assertEquals(56, elleve, 24);
-        assertEquals(28, tolv, 24);
+        assertEquals(28, to, 76);
+        assertEquals(56, tre, 76);
+        assertEquals(83, fire, 76);
+        assertEquals(111, fem, 76);
+        assertEquals(139, seks, 76);
+        assertEquals(167, syv, 76);
+        assertEquals(139, otte, 76);
+        assertEquals(111, ni, 76);
+        assertEquals(83, ti, 76);
+        assertEquals(56, elleve, 76);
+        assertEquals(28, tolv, 76);
+
+    }
+
+    @Test
+    public void probTest2(){
+        int value;
+
+        int to = 0;
+        int tre = 0;
+        int fire = 0;
+        int fem = 0;
+        int seks = 0;
+        int syv = 0;
+        int otte = 0;
+        int ni = 0;
+        int ti = 0;
+        int elleve = 0;
+        int tolv = 0;
+        int forkertnr = 0;
+
+        // Rolling the dice 1000 times.
+        // Counts the values a specific value has been rolled.
+
+        for (int i = 0; i < 1000; i++) {
+
+            shake.Shake();
+
+            value = shake.getSum();
+
+            switch (value) {
+                case 2:
+                    to++;
+                    break;
+                case 3:
+                    tre++;
+                    break;
+                case 4:
+                    fire++;
+                    break;
+                case 5:
+                    fem++;
+                    break;
+                case 6:
+                    seks++;
+                    break;
+                case 7:
+                    syv++;
+                    break;
+                case 8:
+                    otte++;
+                    break;
+                case 9:
+                    ni++;
+                    break;
+                case 10:
+                    ti++;
+                    break;
+                case 11:
+                    elleve++;
+                    break;
+                case 12:
+                    tolv++;
+                    break;
+                default:
+                    forkertnr++;
+                    break;
+            }
+
+        }
+
+        // Tests the program.
+        // Checks if all values, of the dice (2-12), has been rolled and equal amount of times (1000/12000)
+        // with a deviation of 593 times.
+        assertEquals(0, forkertnr);
+        assertEquals(28, to, 593);
+        assertEquals(56, tre, 593);
+        assertEquals(83, fire, 593);
+        assertEquals(111, fem, 593);
+        assertEquals(139, seks, 593);
+        assertEquals(167, syv, 593);
+        assertEquals(139, otte, 593);
+        assertEquals(111, ni, 593);
+        assertEquals(83, ti, 593);
+        assertEquals(56, elleve, 593);
+        assertEquals(28, tolv, 593);
 
     }
 

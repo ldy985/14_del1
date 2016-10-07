@@ -56,14 +56,14 @@ public class DiceTest {
 
         // Tests the program.
         // Checks if all values, of the dice (1-6), has been rolled and equal amount of times (10000/60000)
-        // with a deviation of 400 times.
+        // with a deviation of 418 times.
         assertEquals(0, forkertnr);
-        assertEquals(10000, en, 400);
-        assertEquals(10000, to, 400);
-        assertEquals(10000, tre, 400);
-        assertEquals(10000, fire, 400);
-        assertEquals(10000, fem, 400);
-        assertEquals(10000, seks, 400);
+        assertEquals(10000, en, 418);
+        assertEquals(10000, to, 418);
+        assertEquals(10000, tre, 418);
+        assertEquals(10000, fire, 418);
+        assertEquals(10000, fem, 418);
+        assertEquals(10000, seks, 418);
 
 
     }
