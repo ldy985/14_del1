@@ -25,7 +25,7 @@ public class DiceTest {
         // Counts the values a specific value has been rolled.
 
         for (int i = 0; i < 60000; i++) {
-            dice.Roll();
+            dice.roll();
             value = dice.getFaceValue();
             // System.out.println(value + " ");
             switch (value) {

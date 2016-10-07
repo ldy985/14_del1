@@ -11,7 +11,7 @@ public class Dice {
 
     private int faceValue;
 
-    public void Roll() {
+    public void roll() {
 
         faceValue = rand.nextInt(6) + 1;
 

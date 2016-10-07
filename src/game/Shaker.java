@@ -21,10 +21,10 @@ public class Shaker {
 
     //Creating the shake Method returning a string with the values fot Dice1 and dice2
 
-    public void Shake() {
+    public void shake() {
 
-        dice1.Roll();
-        dice2.Roll();
+        dice1.roll();
+        dice2.roll();
 
         valueDice1 = dice1.getFaceValue();
         valueDice2 = dice2.getFaceValue();

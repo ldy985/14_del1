@@ -40,7 +40,7 @@ public class ShakerTest {
 
         for (int i = 0; i < 1000; i++) {
 
-            shake.Shake();
+            shake.shake();
 
             value = shake.getSum();
 
@@ -125,7 +125,7 @@ public class ShakerTest {
 
         for (int i = 0; i < 1000; i++) {
 
-            shake.Shake();
+            shake.shake();
 
             value = shake.getSum();
 
@@ -192,8 +192,8 @@ public class ShakerTest {
     @Test
     public void getSumTest() throws Exception {
 
-        // Calls the Shake() method in the class Shaker, through the object "shake".
-        shake.Shake();
+        // Calls the shake() method in the class Shaker, through the object "shake".
+        shake.shake();
 
         // Checks if the sum given by the Shaker class is between 2 and 12.
         // Returns a boolean whether it works.
@@ -214,8 +214,8 @@ public class ShakerTest {
     @Test
     public void getDoubleTest() {
 
-        // Calls the Shake() method in the class Shaker, through the object "shake".
-        shake.Shake();
+        // Calls the shake() method in the class Shaker, through the object "shake".
+        shake.shake();
 
         // Checks if the getDouble() method works from the Shaker class.
         // Compares the boolean value of the getDouble() with the boolean value of the test

@@ -19,7 +19,7 @@ public class MainTest {
         final Shaker shaker = new Shaker();
         long startTime = System.nanoTime();
 
-        shaker.Shake();
+        shaker.shake();
 
         //Update GUI with the dice roll
         GUI.setDice(shaker.getDie1Value(), shaker.getDie2Value());

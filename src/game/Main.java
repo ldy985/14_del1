@@ -33,7 +33,7 @@ public class Main {
             if (player1.getIsTurn() == true) {
 
                 // Player 1 rolls the dice
-                shaker.Shake();
+                shaker.shake();
 
                 // Player 1 gets the sum of the roll added to his/her's points
                 player1.addPoints(shaker.getSum());
@@ -85,7 +85,7 @@ public class Main {
             } else {
 
                 // Player 2's turn starts
-                shaker.Shake();
+                shaker.shake();
 
                 player2.addPoints(shaker.getSum());
 
